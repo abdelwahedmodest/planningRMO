@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Employes</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Jours</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for employe in employes %}
+        <tr>
+          <td>{{ employe.nom }}</td>
+          <td>{{ employe.prenom }}</td>
+          <td>{{ employe.jours }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

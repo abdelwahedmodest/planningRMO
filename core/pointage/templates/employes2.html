@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Employes</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Jours</th>
+        <th>Adresse</th>
+        <th>Numéro de téléphone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for employe in employes %}
+        <tr>
+          <td>{{ employe.nom }}</td>
+          <td>{{ employe.prenom }}</td>
+          <td>{{ employe.jours }}</td>
+          <td>{{ employe.adresse }}</td>
+          <td>{{ employe.numero_telephone }}</td>
+          <td>{{ employe.email }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

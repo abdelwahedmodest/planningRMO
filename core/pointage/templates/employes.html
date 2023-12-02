@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des employés</title>
+</head>
+<body>
+    <h1>Liste des employés</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Jours de travail</th>
+                <th>Demi-jour mercredi</th>
+                <th>Nombre de jours de travail</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employe in employes %}
+                <tr>
+                    <td>{{ employe.nom }}</td>
+                    <td>{{ employe.prenom }}</td>
+                    <td>{{ employe.email }}</td>
+                    <td>{{ employe.jours_de_travail }}</td>
+                    <td>{{ employe.demi_jour_mercredi }}</td>
+                    <td>{{ employe.nombre_jours_de_travail }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
