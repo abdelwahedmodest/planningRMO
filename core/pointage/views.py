@@ -3,4 +3,4 @@ from .models import Employe
 
 def index(request):
     employes = Employe.objects.all()
-    return render(request, "employes.html", {"employes": employes})
+    return render(request, "pointage/employes.html", {"employes": employes})

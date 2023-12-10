@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from    .  import  settings
 import os 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'pointage'
+    'pointage',
+    'users',
+    'crispy_bootstrap4'
 ]
 
 MIDDLEWARE = [
@@ -70,6 +73,17 @@ TEMPLATES = [
     },
 ]
 
+#or 
+#CACHES = {
+#    'default': {
+#        'BACKEND': 'django_redis.cache.RedisCache',
+#        'LOCATION': f'redis://{settings.REDIS_HOST}:{settings.REDIS_PORT}/{settings.REDIS_DB}',
+#        'OPTIONS': {
+#            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+#        }
+#    }
+#}
+
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
@@ -95,6 +109,11 @@ DATABASES = {
     }
 }
 
+
+# Redis configuration
+REDIS_HOST = 'localhost'  # Replace with your Redis server host
+REDIS_PORT = 6379         # Replace with your Redis server port
+REDIS_DB = 0              # Replace with your desired Redis database number
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -136,3 +155,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# settings.py
+
+
+
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
