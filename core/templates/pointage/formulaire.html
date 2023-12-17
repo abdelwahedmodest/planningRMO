@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load  static %}
+
+{% block title %}Formulaire{% endblock  %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'pointage/style.css' %}">
+
+
+<!-- votre_template.html -->
+
+
+<center>
+    <form method="post" class="div" action="">
+    
+        
+        {% csrf_token %}
+        {{ form.as_p }}
+    
+    
+    <button type="submit"   class="btn btn-success">Soumettre</button>
+</form>
+</center>
+
+{% endblock content %}

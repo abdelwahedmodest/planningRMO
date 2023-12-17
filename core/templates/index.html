@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load  static %}
+{% block title %}GOOD{% endblock  %}
+
+{% block content %}
+
+{%  block  thecss %}
+<link rel="stylesheet" href="{%  static 'pointage/mystyle.css'  %}">
+{%  endblock %}  
+{%  block  font %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com"  crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@1,300&display=swap" >
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Spectral:ital,wght@0,200;1,300&display=swap" >
+{%  endblock %}
+{% block font-awesome %}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+{% endblock %}
+
+<div class="mhn-news-app">
+    <div class="header">
+        <div class="clearfix">
+            <a href="#navi" class="pull-left"><i class="fa fa-bars"></i></a>
+            <span class="title">RMOplanning</span>
+            <a href="#" class="pull-right"><i class="fa fa-search"></i></a> 
+        </div>
+    </div>
+    
+    <div class="nano">
+    <div class="nano-content">
+    <div class="category-wrap">
+    <div class="category">
+        <div class="statistic-wrap">
+            <div class="head"><a class="dropdown-item" href="{%  url  'Smart Planning'   %}">Smart Planning</a></div>
+            <div class="statistic">
+                <div class="count">06</div>
+                <div class="title">Employes</div>
+            </div>
+            <div class="statistic">
+                <div class="count">04</div>
+                <div class="title">Postes</div>
+            </div>
+            <div class="statistic">
+                <div class="count">12</div>
+                <div class="title">semaines</div>
+            </div>
+        </div>
+        <div class="links-wrap">
+            <div class="toggle"><i class="fa"></i></div>
+            <div class="links">
+                <a href="#"><i class="fa fa-plus"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-mail-reply"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="category">
+        <div class="statistic-wrap">
+            <div class="head"><i class="fa fa-paint-brush"></i> RMO &amp; Planning</div>
+            <div class="statistic">
+                <div class="count">33</div>
+                <div class="title">cadres</div>
+            </div>
+            <div class="statistic">
+                <div class="count">29</div>
+                <div class="title">Responsables</div>
+            </div>
+            <div class="statistic">
+                <div class="count">17</div>
+                <div class="title">Managers</div>
+            </div>
+        </div>
+        <div class="links-wrap">
+            <div class="toggle"><i class="fa"></i></div>
+            <div class="links">
+                <a href="#"><i class="fa fa-plus"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-mail-reply"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="category">
+        <div class="statistic-wrap">
+            <div class="head"><i class="fa fa-fort-awesome"></i> Moliere school</div>
+            <div class="statistic">
+                <div class="count">33</div>
+                <div class="title">etudiant</div>
+            </div>
+            <div class="statistic">
+                <div class="count">29</div>
+                <div class="title">professeurs</div>
+            </div>
+            <div class="statistic">
+                <div class="count">25</div>
+                <div class="title">femmes de menage</div>
+            </div>
+        </div>
+        <div class="links-wrap">
+            <div class="toggle"><i class="fa"></i></div>
+            <div class="links">
+                <a href="#"><i class="fa fa-plus"></i></a>
+                <a href="#"><i class="fa fa-star"></i></a>
+                <a href="#"><i class="fa fa-mail-reply"></i></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    </div>
+    </div>
+    
+    <div class="nav-overlay"></div>
+    <div class="navi">
+        <div class="header">
+            <img src="https://s.gravatar.com/avatar/24a65a47147cddf5b270bc9f609ffa2a?s=100">
+            <h4>material pedagogique</h4>
+        </div>
+        <div class="links">
+            <a href="javascript:void(0)"><i class="fa fa-user"></i> Profile</a>
+            <a href="javascript:void(0)"><i class="fa fa-briefcase"></i> Portfolio</a>
+            <a href="javascript:void(0)"><i class="fa fa-refresh"></i> Updates</a>
+            <a href="javascript:void(0)"><i class="fa fa-cogs"></i> Settings</a>
+        </div>
+    </div>
+    
+    </div>
+
+{%  block  script %}
+<script type="module"   src="{% static  'pointage/myscript.js'  %}"></script>
+{%  endblock  %}
+{% endblock content %}
